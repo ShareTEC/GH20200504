@@ -1,0 +1,28 @@
+//Chicken Setup
+//-------------
+//"Primary Key"			Code[10]
+//"Chicken Nos."		Code[20]
+//"Egg. Production Nos."	Code[20]
+
+Egg Prod. Header     Document & List
+----------------------
+"No."				Code[20]
+"Document Date"			Date
+//"No. Series"			Code[20]
+"Location Code"			Code[10]
+
+No. Of Eggs			FF
+"Egg Type Filter"		Code[10] (FlowFilter)
+"Chicken Filter"		Code[20] (FlowFilter)
+
+Egg Prod. Line		ListPart
+--------------------
+"Document No."			Code[20]
+"Line No."			Integer
+"Chicken No."			Code[20]
+"Chicken Name"			Text[50] FF
+"Egg Type Code"			Code[10]
+"Egg Type Description" 		Text[50] FF
+Quantity			Integer
+"Egg Date"			Date
+"Location Code"			Code[10]

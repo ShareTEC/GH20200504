@@ -1,0 +1,114 @@
+Ticket Systeem
+
+Mogelijkheid tot ingeven van tickets
+- Ticket ingeven via BC
+  - Door support medewerker
+- Ticket ingeven via externe koppeling
+  - Door de eindklant
+  - Toegang tot externe koppeling => login voorzien
+
+*** TICKET ***
+
+Een ticket beschrijft een specifiek probleem. Telkens indien omtrent hetzelfde probleem een nieuwe communicatie optreedt, dient dit op het desbetreffende ticket bijgehouden te worden. 
+Dus meerdere "comments" per ticket. Een comment kan internal of external zijn. Hierdoor wordt een comment enkel beschikbaar gemaakt naar de support mederwerkers of ook naar klanten.
+Enkel bij totaal andere problemen dient een nieuw ticket aangemaakt te worden.
+
+*** Aanmaken ticket ***  + automatische datum & tijdregistratie
+
+Als gebruiker/eindklant mogelijkheid aanmaken ticket
+- Titel (omschrijving) ingeven
+- Status kunnen aanpassen
+- Origine is automatisch ingevuld (bv website, app, ...)
+- Probleemstelling definieren
+- Bijlage koppelen/opladen aan probleemstelling 
+- Contact
+
+Als medewerker aanmaken ticket
+- Titel (omschrijving ingeven)
+- Status kunnen aanpassen
+- Prioriteit kunnen aanpassen
+- Ticket kunnen toewijzen aan een interne medewerker (bv. resources)
+- Klant kunnen koppelen aan ticket
+- Origine van ticket kunnen ingeven (keuzelijst)
+- Contact van de klant koppelen aan ticket
+- Probleemstelling/antwoord definieren
+- Bijlage koppelen/opladen
+
+*** Raadplegen ticket ***
+
+Als gebruiker/eindklant mogelijkheid opvolgen van ticket
+- Overzicht van alle (openstaande) tickets
+- Ticket kunnen aanpassen
+  - Nieuwe probleemstelling/antwoord definieren + automatische datum & tijdregistratie
+  - Bijkomende bijlagen opladen
+  - Status kunnen aanpassen (bv. Closed by Customer)
+
+Als medewerker mogelijkheid opvolgen van ticket
+- Zelfde funct. als aanmaken ticket 
+
+*** Status management ***
+- Nieuw ticket krijgt status "OPEN"
+- Interne mederwerker kan status aanpassen (en dus ook sluiten)
+- Eindklant kan status aanpassen (en dus ook sluiten)
+- Eindklant kan een nieuwe probleemstelling/antwoord toevoegen aan ene ticket => Status moet terug op 
+
+*** Aanmelden op extern systeem ***
+- Eindklant moet op de website kunnen aanmelden. Hiervoor heeft hij een gebruikersnaam en wachtwoord nodig. (Dit kan bv. gedefinieerd worden op de klantenfiche.)
+
+*** Opvolging van tickets door medewerkers ***
+
+- Bij aanmelden overzicht van alle toegewezen tickets
+- Aantal Cues met info over # tickets/status, gemiddelde doorlooptijd per ticket, ...
+- (Optioneel: facturatie van gesloten tickets)
+- Opvragen van een detail van ticket
+  - Overzicht van communicatie tussen klant/medewerker (=> lijnen)
+  - Overzicht van bijlagen per lijn
+  - Bijlage kunnen visualiseren
+  - Bijlage kunnen downloaden
+- Gebruik van een "kanban" systeem om eenvoudig tickets te assignen (gebruik van ControlAddIn)
+https://www.jqwidgets.com/jquery-widgets-demo/demos/jqxkanban/index.htm#demos/jqxkanban/defaultfunctionality.htm
+
+*** Bijlagen ***
+
+- Bijlagen moeten verwijderd kunnen worden (ook in Azure)
+- Bijlagen moeten extra toegevoegd kunnen worden
+- Bijlagen moeten vervangen kunnen worden (=> opladen onder dezelfde naam)
+- Bijlagen moeten uniek zijn (betekent bestand met naam A.docx mag niet zomaar door een ander ticket met bijlage A.docx overschreven worden)
+- Bijlagen worden opgeslagen in de cloud (liefst Azure Blob Storage)
+
+*** Mailsysteem ***
+
+- Bij aanmaken van nieuw ticket zou mail gestuurd moeten worden naar klant (ter bevestiging) (via bv SendGrid)
+- Bij elke status wijziging een mail sturen naar de klant
+- Bij elke nieuwe entry door support moet mail gestuurd naar klant
+- Mailtemplates zouden via een WYSIWYG editor (bv. CkEditor) aangemaakt moeten worden
+  - Templates kunnen gebruik maken van placeholders om waarden uit het ticket in over te nemen.
+
+*** Externe koppeling *** 
+
+- Website of Microsoft PowerApps om externe entry mogelijk te maken
+  - Hiervoor moet een API systeem binnen BC aangemaakt worden (geen SOAP)
+- Koppeling met PowerBI om een rapportageoverzicht te krijgen
+  - Aantal totale tickets per maand
+    - Tickets per klant
+    - Openstaande tickets
+    - ...
+
+*** ALM/SCM ***
+
+- Organisatie heeft de nodige licenties voor Azure DevOps
+- Opzetten van Git Repository
+- Opzetten van CI/CD
+
+
+
+FEATURES
+=========
+
+LOGON & IDENTIFICATION
+TICKET ENTRY
+TICKET MANAGEMENT
+TICKET NOTIFICATION MGMT
+TICKET PLANNING
+AL & SCM
+OPTIONAL: TICKET INVOICING

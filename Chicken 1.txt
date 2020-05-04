@@ -1,0 +1,23 @@
+Chicken  List & Card
+-------
+"No."				Code[20] PK
+Name				Text[50]
+"Chicken Type Code"		Code[10]
+"Chicken Type Description"	Text[50] (FF: Lookup)
+//"No. Series"			Code[20]
+"No. Of Eggs On Document"	Integer  (FF)
+"Date Filter"			Date  	 (FlowFilter)
+"Egg Type Filter"		Code[10] (FlowFilter)
+"Location Filter"		Code[10] (FlowFilter)
+Blocked				Boolean
+Picture				Media
+
+Chicken Type  List
+------------
+Code				Code[10]
+Description			Text[50]
+
+Egg Type     List
+--------
+Code				Code[10]
+Description			Text[50]
